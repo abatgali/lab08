@@ -16,11 +16,11 @@ class IndexView extends View {
 ?>
     <!-- page specific content starts -->
         <form action="index.php?action=" method="post">
-            <input id="username" type="text" required>
-            <input id="password" type="password" minlength="5" required>
-            <input id="email" type="email" required>
-            <input id="f_name" type="text" required>
-            <input id="l_name" type="text" required>
+            <input id="username" type="text" value="Username">
+            <input id="password" type="password" minlength="5" value="Password, 5 characters minimum" required>
+            <input id="email" type="email" value="email" required>
+            <input id="f_name" type="text" value="First name" required>
+            <input id="l_name" type="text" value="Last name" required>
             <input type="submit" value="Submit">
         </form>
         <!-- page specific content ends -->
