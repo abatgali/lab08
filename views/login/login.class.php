@@ -20,11 +20,11 @@ class LoginView extends View{
         <div class="middle-row">Please enter your username and password.</div>
 
     <form action="index.php?actions=" method="post">
-        <input id="username" name="username" type="text" value="Username">
+        <div><input style="width: 500px; margin-left: 25px;" id="username" name="username" type="text" value="Username"></div>
 
-        <input id="password" name="password" type="password" minlength="5" value="Password">
+       <div> <input style="width: 500px; margin-left: 25px; id="password" name="password" type="password" minlength="5" value="Password"></div>
 
-        <input class="button" type="submit" value="LOGIN">
+        <div><input style="width: 500px; margin-left: 25px; class="button" type="submit" value="LOGIN"></div>
     </form>
 
         <div class="bottom-row">
