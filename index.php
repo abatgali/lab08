@@ -24,6 +24,7 @@ if ((isset($_GET['action'])) && !(empty($_GET['action']))) {
     $action = $_GET['action'];
 }
 
+// calling appropriate function as per action
 if ($action == 'home') {
 
     $user_controller->index();
