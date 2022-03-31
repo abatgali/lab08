@@ -19,7 +19,7 @@ class ResetView extends View
 
         <!-- page specific content starts -->
 
-
+        <div class="top-row">reset password</div>
 
         <!-- page specific content ends -->
 
