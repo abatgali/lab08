@@ -15,7 +15,10 @@ class IndexView extends View {
         parent::header();
 ?>
     <!-- page specific content starts -->
-        <div> Please complete the entire form. All fields are required.</div> <br><br>
+        <div class="top-row">create an account</div><br>
+
+        <div style="margin-left: 25px"> Please complete the entire form. All fields are required.</div><br>
+
         <form action="index.php?action=" method="post">
             <input style="width: 500px; margin-left: 25px" id="username" name="username" type="text" placeholder="Username" required>
             <br><br>
@@ -27,8 +30,12 @@ class IndexView extends View {
             <br><br>
             <input style="width: 500px; margin-left: 25px" id="l_name" name="last" type="text" placeholder="Last Name" required>
             <br><br>
-            <input style="width: 505px; margin-left: 25px; padding: 5px;background-color: #333333; color: white" type="submit" value="REGISTER">
+            <input style="width: 505px; margin-left: 25px; padding: 5px;background-color: #333333; color: white" type="submit" value="REGISTER"><br><br>
         </form>
+
+        <div class="bottom-row">
+            <span>Already have an account? <a href="index.php?action=login">Login</a> </span>
+        </div>
         <!-- page specific content ends -->
 
         <?php
