@@ -12,21 +12,18 @@ class LoginVerifyView extends View{
 
         //display header
         parent::header();
+        ?>
 
+<!--        //page content starts-->
 
-        //page content starts
-        //check if login attempt was successful
-        if (login() == true){
-            echo '<h1>Your account has been created successfully</h1>';
-        } else {
-            echo '<h1> Your last attempt for creating an account failed. Please try again. </h1>';
-        }
+        <div class="top-row">LOGIN</div>
 
-    ?>
+        <div class="middle-row">You have successfully logged in.</div>
 
     <!--hyperlinks-->
         <div class="bottom-row">
-            <span>Already have an account? <a href="index.php?action=login">Login</a> </span>
+            <span style="float: left">Want to log out? <a href="index.php?action=logout">Logout</a> </span>
+            <span style="float: right">Reset Password? <a href="index.php?action=reset">Reset</a> </span>
         </div>
 
 

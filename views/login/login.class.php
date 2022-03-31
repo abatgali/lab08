@@ -15,15 +15,16 @@ class LoginView extends View{
         ?>
 
 <!--    page specific content starts-->
+        <div class="top-row">login</div>
 
-        <h1>Please enter your username and password.</h1>
+        <div class="middle-row">Please enter your username and password.</div>
 
     <form action="index.php?actions=" method="post">
         <input id="username" name="username" type="text" value="Username">
 
         <input id="password" name="password" type="password" minlength="5" value="Password">
 
-        <input type="submit" value="LOGIN">
+        <input class="button" type="submit" value="LOGIN">
     </form>
 
         <div class="bottom-row">
