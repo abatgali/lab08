@@ -2,33 +2,70 @@
 
 //This file defines a class named UserModel with four public methods.
 
-class UserModel extends Database {
+class UserModel {
+private $db, $dbConnection;
+static private $_instance = null;
+
+    public function __construct() {
+        $this->db = Database::getDatabase();
+        $this->dbConnection = $this->db->getConnection();
+    }
+
+    static public function getUsers() {
+        if (self::$_instance == NULL) {
+            self::$_instance = new UserModel();
+        }
+        return self::$_instance;
+    }
 
     public function add_user() {
         //retrieve user details from registration form and add into users table in the usersystem database.
-        if (isset($_POST['password'])) {
-            $password = $_POST['password'];
+        if (!filter_has_var(INPUT_POST, 'username') ||
+            !filter_has_var(INPUT_POST, 'password') ||
+            !filter_has_var(INPUT_POST, 'firstname') ||
+            !filter_has_var(INPUT_POST, 'lastname') ||
+            !filter_has_var(INPUT_POST, 'email') ) {
+            return false;
         }
+
+        $username = $this->dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING)));
+        $password = $this->dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING)));
+        $firstname = $this->dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_STRING)));
+        $lastname = $this->dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_STRING)));
+        $email = $this->dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING)));
+
+
+        if (strlen($password) < 5) {
+                return false;
+            }
+
+
         // Passwords need to be hashed before they are stored into the database.
         // To hash a password, call password_hash function. Please refer to http://php.net/manual/en/function.password-hash.php.
-        password_hash($password, PASSWORD_DEFAULT, 10);
+        $hash = password_hash($password, PASSWORD_DEFAULT);
         //store into database
 
+        $sql = "INSERT into ". Database::getUserTable() . "values(null,". $username . "," . $hash .  "," . $email .
+            "," . $firstname . "," . $lastname . ")";
+
         // The method returns true if the insertion is successful or false if it fails.
-        //true, false
+        $query = $this->dbConnection->query($sql);
+        if (!$query) {
+            return false;
+        } return true;
     }
 
     public function verify_user() {
         //retrieve a user’s username and password from the login form and then verify them again a database record.
 // Check if the form is submitted if (
-        if (isset($_POST['login'])) {
+        if (isset($_POST['username']) AND isset($_POST['password'])) {
             $username = $_POST['username'];
             $password = $_POST['password'];
         } exit;
 
-        $x = parent::getInstance();
-        $y = parent::getUserTable();
-        $db = parent::getConnection();
+        $x = Database::getInstance();
+        $y = $x->getUserTable();
+        $db = $x->getConnection();
 
         $sqlU = "SELECT username FROM" . $y . " WHERE username=" . $username;
         $sql = "SELECT password FROM" . $y . " WHERE username=" . $username;
@@ -62,6 +99,6 @@ public function reset_password() {
 
     // Return true if the password is successfully updated or false otherwise.
 
-} return false;
+}
 
 }
