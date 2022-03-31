@@ -14,7 +14,7 @@ return array(
     'IndexView' => $baseDir . '/views/index/index.class.php',
     'LoginVerifyView' => $baseDir . '/views/login/verify.class.php',
     'LoginView' => $baseDir . '/views/login/login.class.php',
-    'LogoutView' => $baseDir . '/views/logout/logout.class.php',
+    'LogoutVerifyView' => $baseDir . '/views/logout/logout.class.php',
     'RegisterView' => $baseDir . '/views/index/register.class.php',
     'ResetConfirmView' => $baseDir . '/views/reset/reset_confirm.php',
     'ResetView' => $baseDir . '/views/reset/reset.class.php',

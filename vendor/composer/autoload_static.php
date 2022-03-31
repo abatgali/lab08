@@ -15,7 +15,7 @@ class ComposerStaticInit86216e7ba35ffe86904c8d8792bd7e33
         'IndexView' => __DIR__ . '/../..' . '/views/index/index.class.php',
         'LoginVerifyView' => __DIR__ . '/../..' . '/views/login/verify.class.php',
         'LoginView' => __DIR__ . '/../..' . '/views/login/login.class.php',
-        'LogoutView' => __DIR__ . '/../..' . '/views/logout/logout.class.php',
+        'LogoutVerifyView' => __DIR__ . '/../..' . '/views/logout/logout.class.php',
         'RegisterView' => __DIR__ . '/../..' . '/views/index/register.class.php',
         'ResetConfirmView' => __DIR__ . '/../..' . '/views/reset/reset_confirm.php',
         'ResetView' => __DIR__ . '/../..' . '/views/reset/reset.class.php',
