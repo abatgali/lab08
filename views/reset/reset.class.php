@@ -8,7 +8,6 @@
  * logs in. It should also make the username field read-only. The form should use POST method
  * to submit data. If the user is currently not logged in, display an error message instead.
  */
-require 'Lab08/Untitled/models/user_model.class.php';
 
 class ResetView extends View
 {
