@@ -2,15 +2,6 @@
 
 class UserController {
 
-    /**
-
-    public function getUserModel()
-    {
-        return $this->userModel;
-    }
-    */
-
-
 
     // display the registration form; default action
     public function index()
