@@ -12,7 +12,8 @@ class UserModel {
 
         // Passwords need to be hashed before they are stored into the database.
         // To hash a password, call password_hash function. Please refer to http://php.net/manual/en/function.password-hash.php.
-
+        //password_hash($password, $algo, $options = []);
+        //store into database
     }
 
     public function verify_user() {
