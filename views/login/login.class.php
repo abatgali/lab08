@@ -12,11 +12,30 @@ class LoginView extends View{
 
         //display header
         parent::header();
+        ?>
 
-        echo '';
+<!--    page specific content starts-->
+        <div class="top-row">login</div>
+
+        <div class="middle-row">Please enter your username and password.</div>
+
+    <form action="index.php?actions=" method="post">
+        <input id="username" name="username" type="text" value="Username">
+
+        <input id="password" name="password" type="password" minlength="5" value="Password">
+
+        <input class="button" type="submit" value="LOGIN">
+    </form>
+
+        <div class="bottom-row">
+            <span>Don't have an account? <a href="index.php">Register</a> </span>
+        </div>
 
 
 
+
+
+<?php
         //display footer
         parent::footer();
     }

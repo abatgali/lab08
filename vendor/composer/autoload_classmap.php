@@ -12,6 +12,7 @@ return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Database' => $baseDir . '/application/database.class.php',
     'IndexView' => $baseDir . '/views/index/index.class.php',
+    'LoginVerifyView' => $baseDir . '/views/login/verify.class.php',
     'LoginView' => $baseDir . '/views/login/login.class.php',
     'LogoutView' => $baseDir . '/views/logout/logout.class.php',
     'RegisterView' => $baseDir . '/views/index/register.class.php',
