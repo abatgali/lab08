@@ -17,7 +17,7 @@ class RegisterView extends View
         ?>
         <!-- page specific content starts -->
         <!-- display confirmation message top row-->
-        <div class="top-row">Congrats!</div>
+        <div class="top-row"> create an account</div>
 
         <!-- middle row -->
         <div class="middle-row">

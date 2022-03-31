@@ -30,7 +30,7 @@ class IndexView extends View {
             <br><br>
             <input style="width: 500px; margin-left: 25px" id="l_name" name="last" type="text" placeholder="Last Name" required>
             <br><br>
-            <input style="width: 505px; margin-left: 25px; padding: 5px;background-color: #333333; color: white" type="submit" value="REGISTER"><br><br>
+            <input style="width: 505px; margin-left: 25px; padding: 5px;background-color: #333333; color: white" type="submit" value="REGISTER" onclick="window.location='inde'"><br><br>
         </form>
 
         <div class="bottom-row">
