@@ -2,47 +2,64 @@
 
 //This file defines a class named UserModel with four public methods.
 
-class UserModel {
+class UserModel
+{
     //any private attributes
     //the four public methods
-    public function add_user() {
+    public function add_user()
+    {
         //retrieve user details from registration form and add into users table in the usersystem database.
-
-        // The method returns true if the insertion is successful or false if it fails.
-
+        if (isset($_GET['password'])) {
+            $password = $_GET['password'];
+        }
         // Passwords need to be hashed before they are stored into the database.
         // To hash a password, call password_hash function. Please refer to http://php.net/manual/en/function.password-hash.php.
-        //password_hash($password, $algo, $options = []);
+        password_hash($password, null, 10);
         //store into database
+
+        // The method returns true if the insertion is successful or false if it fails.
+        //true, false
     }
 
-    public function verify_user() {
+    public function verify_user()
+    {
         //retrieve a user’s username and password from the login form and then verify them again a database record.
-
-        // If both username and password are valid,create a temporary cookie to store the username and return true;
-
-        // If either username or password is invalid, return false.
-
-        // To verify a hashed password, call password_verify function. Please refer to http://php.net/manual/en/function.password-verify.php.
-
+// Check if the form is submitted if (
+        if (isset($_GET['login'])) {
+            $username = $_GET['username'];
+            $password = $_GET['password'];
+        }
     }
 
-    public function logout() {
-        //logout a user by destroying the temporary cookie created when the user signs in.
+    password_verify($password);
+    // If both username and password are valid, create temporary cookie to store username and return true;
 
-        //The method should return true.
+    // If either username or password is invalid, return false.
 
-    }
+    // To verify a hashed password, call password_verify function. http://php.net/manual/en/function.password-verify.php.
 
-    public function reset_password() {
-        //retrieve a user’s username and password from the password reset form and
+}
 
-        // then update the user’s password in the database.
+public
+function logout()
+{
+    //logout a user by destroying the temporary cookie created when the user signs in.
 
-        // Make sure the password is hashed before it gets updated.
+    //The method should return true.
 
-        // Return true if the password is successfully updated or false otherwise.
+}
 
-    }
+public
+function reset_password()
+{
+    //retrieve a user’s username and password from the password reset form and
+
+    // then update the user’s password in the database.
+
+    // Make sure the password is hashed before it gets updated.
+
+    // Return true if the password is successfully updated or false otherwise.
+
+}
 
 }
