@@ -9,7 +9,7 @@ class UserModel {
         //retrieve user details from registration form and add into users table in the usersystem database.
 
         // The method returns true if the insertion is successful or false if it fails.
-        
+
         // Passwords need to be hashed before they are stored into the database.
         // To hash a password, call password_hash function. Please refer to http://php.net/manual/en/function.password-hash.php.
 
