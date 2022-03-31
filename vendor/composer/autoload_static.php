@@ -13,6 +13,7 @@ class ComposerStaticInit4adece616ca43fe6616c3791db326444
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Database' => __DIR__ . '/../..' . '/application/database.class.php',
         'IndexView' => __DIR__ . '/../..' . '/views/index/index.class.php',
+        'LoginVerifyView' => __DIR__ . '/../..' . '/views/login/verify.class.php',
         'LoginView' => __DIR__ . '/../..' . '/views/login/login.class.php',
         'LogoutView' => __DIR__ . '/../..' . '/views/logout/logout.class.php',
         'RegisterView' => __DIR__ . '/../..' . '/views/index/register.class.php',
