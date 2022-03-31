@@ -19,7 +19,7 @@ class IndexView extends View {
 
         <div style="margin-left: 25px"> Please complete the entire form. All fields are required.</div><br>
 
-        <form action="index.php?action=" method="post">
+        <form action="index.php?action=register" method="post">
             <input style="width: 500px; margin-left: 25px" id="username" name="username" type="text" placeholder="Username" required>
             <br><br>
             <input style="width: 500px; margin-left: 25px" id="password" name="password" type="password" minlength="5" placeholder="Password, 5 characters minimum" required>
@@ -30,7 +30,7 @@ class IndexView extends View {
             <br><br>
             <input style="width: 500px; margin-left: 25px" id="l_name" name="last" type="text" placeholder="Last Name" required>
             <br><br>
-            <input style="width: 505px; margin-left: 25px; padding: 5px;background-color: #333333; color: white" type="submit" value="REGISTER" onclick="window.location='inde'"><br><br>
+            <input style="width: 505px; margin-left: 25px; padding: 5px;background-color: #333333; color: white" type="submit" value="REGISTER"><br><br>
         </form>
 
         <div class="bottom-row">
