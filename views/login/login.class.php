@@ -13,7 +13,7 @@ class LoginView extends View{
         //display header
         parent::header();
 
-        echo '';
+
 
 
 
