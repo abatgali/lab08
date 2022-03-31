@@ -7,6 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInit4adece616ca43fe6616c3791db326444
 {
     public static $classMap = array (
+        'ComposerAutoloaderInit4adece616ca43fe6616c3791db326444' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\ComposerStaticInit4adece616ca43fe6616c3791db326444' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Database' => __DIR__ . '/../..' . '/application/database.class.php',
         'IndexView' => __DIR__ . '/../..' . '/views/index/index.class.php',
@@ -15,7 +18,9 @@ class ComposerStaticInit4adece616ca43fe6616c3791db326444
         'RegisterView' => __DIR__ . '/../..' . '/views/index/register.class.php',
         'ResetConfirmView' => __DIR__ . '/../..' . '/views/reset/reset_confirm.php',
         'ResetView' => __DIR__ . '/../..' . '/views/reset/reset.class.php',
+        'UserController' => __DIR__ . '/../..' . '/controllers/user_controller.class.php',
         'UserError' => __DIR__ . '/../..' . '/views/error/user_error.class.php',
+        'UserModel' => __DIR__ . '/../..' . '/models/user_model.class.php',
         'View' => __DIR__ . '/../..' . '/views/view.class.php',
     );
 
