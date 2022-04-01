@@ -5,6 +5,14 @@
 class UserModel extends Database {
     private $table = "users";
 
+    private $db, $dbConnection;
+
+    public function __construct(){
+        $this->db = Database::getInstance();
+        $this->dbConnection = $this->db->getConnection();
+    }
+
+
     public function getTable()
     {
         return $this->table;
@@ -12,7 +20,7 @@ class UserModel extends Database {
 
     public function add_user() {
 
-        $dbConnection = parent::getConnection();
+        //$dbConnection = parent::getConnection();
 
 
         //retrieve user details from registration form and add into users table in the usersystem database.
@@ -24,11 +32,11 @@ class UserModel extends Database {
             return false;
         }
 
-        $username = $dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING)));
-        $password = $dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING)));
-        $firstname = $dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'f_name', FILTER_SANITIZE_STRING)));
-        $lastname = $dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'l_name', FILTER_SANITIZE_STRING)));
-        $email = $dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING)));
+        $username = $this->dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING)));
+        $password = $this->dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING)));
+        $firstname = $this->dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'f_name', FILTER_SANITIZE_STRING)));
+        $lastname = $this->dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'l_name', FILTER_SANITIZE_STRING)));
+        $email = $this->dbConnection->real_escape_string(trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING)));
 
 
 
@@ -42,7 +50,7 @@ class UserModel extends Database {
 
 
         // The method returns true if the insertion is successful or false if it fails.
-        $query = $dbConnection->query($sql);
+        $query = $this->dbConnection->query($sql);
         if (!$query) {
             return false;
         }

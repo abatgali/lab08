@@ -22,7 +22,8 @@ class RegisterView extends View
         <!-- middle row -->
         <div class="middle-row">
             <?php // retrieve the form data by using the element's name attributes
-            if ($_POST['submit']){
+            $button = $_COOKIE['submit'];
+            if ($button == true){
                 echo "<h3>Your account has successfully been created.</h3>";
             } else {
                 echo "<h3>Registration failed.</h3>";

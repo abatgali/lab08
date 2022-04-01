@@ -18,8 +18,9 @@ class UserController {
 
 
         $userModel = new UserModel();
+        $d = $_COOKIE['submit'];
         if($userModel->add_user()) {
-            $_POST['submit'] = true;
+            $d = true;
         }
 
         $registerView->display();
