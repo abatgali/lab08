@@ -22,12 +22,7 @@ class UserController {
             $_POST['submit'] = true;
         }
 
-
         $registerView->display();
-
-
-
-
 
     }
 
