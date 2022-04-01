@@ -22,7 +22,7 @@ class LoginView extends View{
         <div style="margin-left: 25px;">Please enter your username and password.</div>
         <br>
 
-    <form action="index.php?action=" method="post">
+    <form action="index.php?action=verify" method="post">
         <div><input style="width: 500px; margin-left: 25px;" id="username" name="username" type="text" value="Username"></div>
 
        <div> <input style="width: 500px; margin-left: 25px; id="password" name="password" type="password" minlength="5" value="Password"></div>
