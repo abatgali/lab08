@@ -18,7 +18,7 @@ class UserController {
 
 
         $userModel = new UserModel();
-        $d = $_COOKIE['submit'];
+        $d = $_POST['submit'];
         if($userModel->add_user()) {
             $d = true;
         }
