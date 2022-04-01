@@ -5,10 +5,6 @@
 class UserModel extends Database {
     private $table = "users";
 
-
-    /**
-     * @return string
-     */
     public function getTable()
     {
         return $this->table;
