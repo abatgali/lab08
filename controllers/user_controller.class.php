@@ -2,7 +2,6 @@
 
 class UserController {
 
-
     // display the registration form; default action
     public function index()
     {
@@ -16,7 +15,20 @@ class UserController {
     public function register()
     {
         $registerView = new RegisterView();
+
+
+        $userModel = new UserModel();
+        if($userModel->add_user()) {
+            $_POST['submit'] = true;
+        }
+
+
         $registerView->display();
+
+
+
+
+
     }
 
     // display the login form

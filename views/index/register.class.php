@@ -22,10 +22,10 @@ class RegisterView extends View
         <!-- middle row -->
         <div class="middle-row">
             <?php // retrieve the form data by using the element's name attributes
-            if (isset($_POST['submit'])) {
+            if ($_POST['submit']){
                 echo "<h3>Your account has successfully been created.</h3>";
             } else {
-                echo "<h3>We are sorry, but an error has occurred.</h3>";
+                echo "<h3>Registration failed.</h3>";
             } ?>
         </div>
 
